@@ -4,7 +4,7 @@ import "./LeftIconStyle.css";
 const LeftIcons = () => {
   return (
     <div className="icons">
-      <div className="icons-menu">
+      <div className="icons-menu mb-5">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="30"
