@@ -1,10 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import "./LeftIconStyle.css";
 
 const LeftIcons = () => {
+
+  const [menu, setMenu] = useState(false);
+
+  
+  const menuClick = () => {
+    setMenu(!menu);
+    console.log(menu);
+  };
+
+
+
   return (
     <div className="icons">
-      <div className="icons-menu mb-5 ">
+      <div
+        onClick={() => {
+          menuClick();
+        }}
+        className="icons-menu mb-5 "
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="30"
