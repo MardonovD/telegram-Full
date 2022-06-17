@@ -1,8 +1,9 @@
+import Telegram from "./components/telegram/Telegram";
 import "./index.css";
 function App() {
   return (
     <div className="App">
-      <h1>Salom</h1>
+      <Telegram />
     </div>
   );
 }
