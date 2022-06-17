@@ -2,18 +2,20 @@ import React, { useEffect } from "react";
 import axios from "axios";
 import "./UsersStyle.css";
 const Users = (props) => {
-  const axiosUsers = async () => {
+  const axiosUsers = async (saves) => {
     const res = await axios
       .get("https://fakestoreapi.com/users")
       .catch((err) => console.log(err, "ERROR"));
     console.log(res);
+    saves(res);
   };
 
   useEffect(() => {
     const thunkWith = (res) => async (dispatch) => {
       dispatch(props.usersAction(res));
     };
-    axiosUsers();
+
+    axiosUsers(thunkWith());
   }, []);
 
   return (
