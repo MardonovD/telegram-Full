@@ -1,13 +1,17 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "./UsersStyle.css";
 const Users = (props) => {
-  const axiosUsers = async (saves) => {
+  const [data, setData] = useState([]);
+  console.log(props.userReducers.users);
+
+  const axiosUsers = async (save) => {
     const res = await axios
       .get("https://fakestoreapi.com/users")
       .catch((err) => console.log(err, "ERROR"));
     console.log(res);
-    saves(res);
+    save(res.data);
+    setData(res);
   };
 
   useEffect(() => {
@@ -16,14 +20,14 @@ const Users = (props) => {
     };
 
     axiosUsers(thunkWith());
-  }, []);
+  }, [data]);
 
   return (
     <div className="users">
       <div className="users-map">
         <div className="users-inp">
           <input
-            type="text "
+            type="text"
             className="form-control bg-secondary"
             placeholder="search"
           />
