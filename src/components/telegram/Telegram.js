@@ -1,5 +1,6 @@
 import React from "react";
 import LeftIcons from "../lefticons/LeftIcons";
+import Users from "../users/Users";
 import "./TelegramStyle.css";
 const Telegram = () => {
   return (
@@ -9,7 +10,9 @@ const Telegram = () => {
           <div className="col-1">
             <LeftIcons />
           </div>
-          <div className="col-3"></div>
+          <div className="col-3">
+            <Users />
+          </div>
           <div className="col-5"></div>
           <div className="col-3"></div>
         </div>

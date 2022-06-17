@@ -8,7 +8,11 @@
   padding: 20px;
   position: relative;
 }
-
+.icons-menu {
+  position: static;
+  z-index: 100;
+}
+/* 
 .icons::before {
   content: "";
   top: 0;
@@ -22,7 +26,22 @@
 .icons-menu {
   position: static;
   z-index: 5;
+} */
+
+.icons-menu-click {
+  top: 0;
+  left: 0;
+  position: absolute;
+  height: 100%;
+  width: 300%;
+  background-color: var(--color-bg-bold);
+  transition: all ease-in-out 1s;
 }
+.none {
+  display: none;
+}
+
+
 
 .icons-menu,
 .icons-chat,
