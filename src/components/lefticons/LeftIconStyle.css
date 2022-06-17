@@ -7,3 +7,28 @@
   /* align-items: center; */
   padding: 20px;
 }
+
+.icons-menu,
+.icons-chat,
+.icons-group,
+.icons-shaxsiy,
+.icons-channel,
+.icons-oqilmagan,
+.icons-edit {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center */
+  justify-content: center;
+}
+
+.icons-menu,
+.icons-chat,
+.icons-group,
+.icons-shaxsiy,
+.icons-channel,
+.icons-oqilmagan,
+.icons-edit p {
+  font-size: 12px;
+  margin: 2px;
+}
