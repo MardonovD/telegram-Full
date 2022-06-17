@@ -1,6 +1,6 @@
 import React from "react";
 import LeftIcons from "../lefticons/LeftIcons";
-import Users from "../users/Users";
+import { UserContainerConnect } from "../../redux/containers/UserContainers";
 import "./TelegramStyle.css";
 const Telegram = () => {
   return (
@@ -11,7 +11,7 @@ const Telegram = () => {
             <LeftIcons />
           </div>
           <div className="col-3">
-            <Users />
+            <UserContainerConnect />
           </div>
           <div className="col-5"></div>
           <div className="col-3"></div>
